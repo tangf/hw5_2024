@@ -58,7 +58,7 @@ div .card > header > h3 {
 
 .card {
     border: none;
-    flex: 1 0 450px;
+    flex: 0 0 450px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -68,7 +68,7 @@ div .card > header > h3 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 100px;
+    /* margin: 0 100px; */
 }
   
 .gallery {
