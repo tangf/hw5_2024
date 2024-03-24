@@ -26,6 +26,25 @@ header {
     align-items: center;
     flex-direction: column;
 }
+
+a.skip:focus {
+    position: absolute;
+    top: 25px;
+    background-color: black;
+    color: white;
+}
+
+a.skip{
+    top: -100px; 
+    background-color: black;
+    color: white;
+}
+
+a.skip:visited {
+    top: -100px;
+    background-color: black;
+    color: white;
+}
   
 .nav_links {
     display: flex;
