@@ -34,7 +34,7 @@ header {
 }
 
 a:visited {
-    color: inherit;
+    color: blue;
 }
   
 div .card > header {
@@ -131,8 +131,8 @@ div .card > header > h3 {
         flex: 1;
     }
 
-    nav {  
-        width: 70%;
+    header nav {  
+        width: 75%;
         flex: 1;
     }
   
