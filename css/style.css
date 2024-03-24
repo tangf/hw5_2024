@@ -29,13 +29,8 @@ header {
   
 .nav_links {
     display: flex;
-    list-style: none;
     flex-direction: column;
-    align-items:center;
-}
-
-.nav_links li {
-    padding: 0 15px;
+    align-items: center;
 }
 
 a:visited {
@@ -58,7 +53,7 @@ div .card > header > h3 {
 
 .card {
     border: none;
-    flex: 0 0 450px;
+    flex-basis: 450px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -101,11 +96,16 @@ div .card > header > h3 {
         flex-direction: row;
     }
 
-    .pricing .card {
-        flex: 0 0 275px;
+    .card > header > h3{
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
     }
 
-    header:first-of-type {
+    .pricing .card {
+        flex-basis: 275px;
+    }
+
+    body > header:first-child {
         position: sticky;
         top: 0;
         z-index: 999;
@@ -124,31 +124,40 @@ div .card > header > h3 {
 @media print {
     body {
       font-family: Arial, Helvetica;
-      background: none;
+      background-image: none;
+    }
+
+    header {
+        flex: 1;
+    }
+
+    nav {  
+        width: 70%;
+        flex: 1;
     }
   
     .nav_links {
-      flex-direction: row;
-      justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    div .pricing {
-      align-items: flex-end;
+    .pricing {
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
   
-    div .card {
-      flex-basis: 325px;
-      border: 2px solid #45ADDD;
+    .pricing .card {
+        flex: 1 1 325px;
+        border: 2px solid #45ADDD;
     }
   
-    div .gallery {
-      display: none;
+    #gallery, .gallery {
+        display: none;
     }
 
-    .card::before {
+    .card ul li:nth-child(2)::after {
         content: "\1F44D";
         display: inline-block;
-        margin-right: 5px;
     }
 
 }
